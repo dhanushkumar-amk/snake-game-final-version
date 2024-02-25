@@ -1,0 +1,78 @@
+* {  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #e3f2fd;
+}
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  background: #293447;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.game-details {
+  color: #88c6dc;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.play-board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  background: #212837;
+}
+
+/* =========creating snake food ============ */
+.play-board .food {
+  background-color: #ff003d;
+}
+/* =========creating snake head ============ */
+
+.play-board .head {
+  background-color: aqua;
+}
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+.controls i {
+  color: #88c6dc;
+  padding: 25px 0;
+  width: calc(100% / 4);
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.3rem;
+  border-right: 1px solid #171b26;
+}
+
+/* creating the controls for the smaller devices */
+@media screen and (max-width: 700px) {
+  .wrapper {
+    width: 90vmin;
+
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
